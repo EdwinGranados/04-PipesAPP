@@ -1,0 +1,63 @@
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Uppercase" [subheader]="nombreUpper">
+            {{nombreLower|uppercase}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Lowercase" [subheader]="nombreLower">
+            {{nombreUpper | lowercase}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Tittelcase" [subheader]="nombreTittle">
+            {{nombreTittle | titlecase}}
+        </p-card>
+    </div>
+</div>
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipe para mostar las fechas
+    </p>
+</div>
+<div class="grid">
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date </li>
+                <li>fecha | date:'short' </li>
+                <li>fecha | date:'long' </li>
+                <li>fecha | date:'MMM' </li>
+                <li>fecha | date:'MMMM dd,yyyy' </li>
+            </ul>
+            <hr>
+            <ul>
+                <li> fehca | date:'long':'GMT-6' </li>
+                <li> fehca | date:'long':'GMT-4' </li>
+                <li> fehca | date:'long': ' ':'en' </li>
+                <li> fehca | date:'long': ' ':'fr' </li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li> {{fehca}} </li>
+                <li> {{fehca | date}} </li>
+                <li> {{fehca | date:'short'}} </li>
+                <li> {{fehca | date:'long'}} </li>
+                <li> {{fehca | date:'MMM'}} </li>
+                <li> {{fehca | date:'MMMM dd,yyyy'}} </li>
+            </ul>
+            <hr>
+            <ul>
+                <li> {{fehca | date:'long':'GMT-6'}} </li>
+                <li> {{fehca | date:'long':'GMT-4'}} </li>
+                <li> {{fehca | date:'long':'':'en'}} </li>
+                <li> {{fehca | date:'long':'':'fr'}} </li>
+            </ul>
+        </p-card>
+    </div>
+</div>
