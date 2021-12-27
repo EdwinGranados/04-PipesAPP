@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -13,29 +14,30 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label:'Pipes de Angular',
-        icon:'pi pi-desktop',
-        items:[
+        label: 'Pipes de Angular',
+        icon: 'pi pi-desktop',
+        items: [
           {
-            label:'Textos y Fechas',
+            label: 'Textos y Fechas',
             icon: 'pi pi-aling-left',
-            routerLink:'/'
+            routerLink: '/'
           },
           {
-            label:'Numeros',
+            label: 'Numeros',
             icon: 'pi pi-dollar',
-            routerLink:'numeros'
+            routerLink: 'numeros'
           },
           {
-            label:'No comunes',
+            label: 'No comunes',
             icon: 'pi pi-globe',
-            routerLink:'no-comunes'
+            routerLink: 'no-comunes'
           },
         ]
       },
       {
-        label:'Pipes personalizados',
-        icon:'pi pi-cog'
+        label: 'Pipes personalizados',
+        icon: 'pi pi-cog',
+        routerLink: 'ordenar'
       }
     ];
   }
